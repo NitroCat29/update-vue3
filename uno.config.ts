@@ -24,10 +24,9 @@ export default defineConfig({
     [
       /^(?:border|b)()(?:-(.+))?$/,
       ([, width, color], { theme }) => {
-        const borderWidth = width ? '1px' : `${width}px`;
+        const borderWidth = width ? `${width}px` : '1px';
         const borderColor =
-          (theme as { colors: { [key: string]: string } }).colors[color] ||
-          color;
+          (theme as { colors: { [key: string]: string } }).colors[color] || color;
         return {
           border: `${borderWidth} solid`,
           'border-color': borderColor,

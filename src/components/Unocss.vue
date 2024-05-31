@@ -22,24 +22,45 @@ const isHovered = useElementHover(menuRef);
     shadow-lg
     dark:shadow-2xl
     dark:shadow-red
-    border-50
+    b-black
+    style="transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out"
   >
-    <div class="flex items-center">
-      <a href="" text-lg font-bold text-gray-800 dark:text-white>Logo</a>
+    <div flex items-center>
+      <a
+        href="#"
+        relative
+        left-10
+        decoration-none
+        text-lg
+        font-bold
+        text-gray-800
+        dark:text-white
+        ><span block i-uil-home-alt color-black dark:color-white w-10 h-10></span
+      ></a>
     </div>
     <div class="flex items-center">
       <ul class="flex space-x-4">
         <li>
           <a
             href="#"
-            class="text-gray-800 hover:text-gray-600 dark:text-white dark:hover:text-gray-300"
+            text-gray-800
+            hover:text-gray-600
+            dark:text-white
+            dark:hover:text-gray-300
+            decoration-none
             >Home</a
           >
         </li>
         <li ref="menuRef" class="relative">
           <a
             href="#"
-            class="text-gray-800 hover:text-gray-600 dark:text-white dark:hover:text-gray-300 flex items-center"
+            text-gray-800
+            hover:text-gray-600
+            dark:text-white
+            dark:hover:text-gray-300
+            flex
+            items-center
+            decoration-none
             @click.prevent="isMenuOpen = !isMenuOpen"
             @blur="isMenuOpen = false"
           >
@@ -70,10 +91,28 @@ const isHovered = useElementHover(menuRef);
       </ul>
       <div class="ml-4">
         <button
-          class="text-gray-500 dark:text-gray-400 hover:bg-purple-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+          id="btn-theme"
+          type="button"
+          text-gray-500
+          dark:text-gray-400
+          hover:bg-slate-500
+          dark:hover:bg-gray-4
+          dark:bg-gray-7
+          ring
+          rounded-lg
+          text-sm
+          outline-none
+          appearance-none
+          cursor-pointer
+          p-2.5
+          inline-flex
+          items-center
+          transition-all
+          duration-200
+          hover:ring-cyan
           @click="isDark = !isDark"
         >
-          <a v-if="isDark" i-carbon-moon color-dark></a>
+          <a v-if="isDark" i-carbon-moon color-white></a>
           <a v-else i-carbon-sun color-dark></a>
         </button>
       </div>
@@ -85,4 +124,9 @@ const isHovered = useElementHover(menuRef);
 // #navbar {
 //   border: 2px solid gray;
 // }
+#btn-theme {
+  border: none;
+
+  cursor: pointer; /* Maintain button functionality */
+}
 </style>
