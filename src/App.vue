@@ -4,6 +4,7 @@ import Hero from '@/components/Hero.vue';
 </script>
 
 <template>
+  <div class="bg-base-100 dark:bg-gray-7">
   <header>
     <Navbar />
   </header>
@@ -11,9 +12,10 @@ import Hero from '@/components/Hero.vue';
   <main>
     <Hero />
   </main>
+</div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
   main {
     margin-top: 20px;
   }

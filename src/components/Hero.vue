@@ -21,27 +21,34 @@ const titleChanger = () => {
 </script>
 
 <template>
-  <div class="h-sm relative flex justify-center">
+  
+  <div class=" relative flex justify-center">
+    <img
+      id="cover"
+      :src="imageSrc"
+      alt="Cover Image"
+      class="absolute inset-0 w-full h-full op-70"
+    />
     <div
       id="hero-component"
-      class="relative text-center p-4 bg-transparent z-99"
+      class="relative text-center p-5 bg-transparent z-99"
     >
-      <h1 class="text-4xl font-bold z-2" @click="titleChanger()">{{ title }}</h1>
+      <div class="flex flex-col flex-wrap justify-center items-center">
+        <h1 class="text-4xl font-bold" @click="titleChanger()">{{ title }}</h1>
       <p class="text-lg">{{ description }}</p>
+      </div>
       <button
-        class="mt-4 px-8 py-2 outline-none border-primary bg-blue-500 text-white rounded hover:bg-blue-2 active:scale-95"
+        class="mt-2 px-8 py-2 outline-none border-primary bg-blue-500 text-white rounded hover:bg-blue-2 active:scale-95"
         type="button"
         @click="linkTo('https://google.com')"
       >
         {{ buttonText }}
       </button>
+      <div class="flex flex-row justify-center items-center gap-2 mt-4">
+        <i class="block i-hugeicons-new-twitter text-2xl" @click="linkTo('https://x.com/bencikeramaian')" ></i>
+        <i id="ig" class="block i-hugeicons-instagram color- text-2xl" @click="linkTo('https://x.com/bencikeramaian')"></i>
+      </div>
     </div>
-    <img
-      id="cover"
-      :src="imageSrc"
-      alt="Cover Image"
-      class="absolute inset-0 w-full h-full object-tc object-cover op-70"
-    />
    
   </div>                                                
 </template>
@@ -58,10 +65,16 @@ const titleChanger = () => {
     object-position: 100% 15%;
   }
 
+  #ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  }
+
   @media (min-width: 768px) {
     #hero {
       height: 100vh;
     }
   }
+
 
 </style>

@@ -16,11 +16,11 @@ const isHovered = useElementHover(menuRef);
     items-center
     justify-between
     p-4
-    bg-white
+    bg-base-100
     dark:bg-gray-800
-    rounded-lg
+    rounded-xl
     shadow-lg
-    dark:shadow-2xl
+    dark:shadow-xl
     dark:shadow-red
     b-black
     style="transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out"
@@ -48,6 +48,7 @@ const isHovered = useElementHover(menuRef);
             dark:text-white
             dark:hover:text-gray-300
             decoration-none
+            
             >Home</a
           >
         </li>
@@ -125,8 +126,6 @@ const isHovered = useElementHover(menuRef);
 //   border: 2px solid gray;
 // }
 #btn-theme {
-  border: none;
-
-  cursor: pointer; /* Maintain button functionality */
+  cursor: pointer;
 }
 </style>

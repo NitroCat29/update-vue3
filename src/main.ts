@@ -1,5 +1,5 @@
 import './assets/main.scss';
-import '@unocss/reset/normalize.css';
+// import '@unocss/reset/normalize.css';
 import 'uno.css';
 
 import { createApp } from 'vue';
