@@ -12,3 +12,9 @@ import Hero from '@/components/Hero.vue';
     <Hero />
   </main>
 </template>
+
+<style lang="scss" scoped>
+  main {
+    margin-top: 20px;
+  }
+</style>
