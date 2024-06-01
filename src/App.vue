@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-import Unocss from './components/Unocss.vue';
+import Navbar from '@/components/Navbar.vue';
+import Hero from '@/components/Hero.vue';
 </script>
 
 <template>
   <header>
-    <Unocss />
+    <Navbar />
   </header>
 
   <main>
-    
+    <Hero />
   </main>
 </template>
