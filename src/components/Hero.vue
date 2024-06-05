@@ -15,7 +15,7 @@ const buttonTexts = ref({
   3: 'Help us!',
 });
 
-const getText = (num: number | unknown) => buttonTexts.value[num] || 'Default';
+const getText = (num: any) => buttonTexts.value[num] || 'Default';
 
 const linkTo = (link: string) => {
   window.location.href = link;
