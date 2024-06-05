@@ -7,6 +7,11 @@ const isMenuOpen = ref(false);
 
 const menuRef = ref<HTMLElement | null>(null);
 const isHovered = useElementHover(menuRef);
+
+const emit = defineEmits(['toggle-dark']);
+const toggleDark = () => {
+  isDark.value = !isDark.value;
+};
 </script>
 
 <template>
@@ -23,7 +28,11 @@ const isHovered = useElementHover(menuRef);
     dark:shadow-xl
     dark:shadow-red
     b-black
-    style="transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out"
+    style="
+      transition:
+        background-color 0.5s ease-in-out,
+        color 0.5s ease-in-out;
+    "
   >
     <div flex items-center>
       <a
@@ -48,7 +57,6 @@ const isHovered = useElementHover(menuRef);
             dark:text-white
             dark:hover:text-gray-300
             decoration-none
-            
             >Home</a
           >
         </li>
@@ -111,7 +119,7 @@ const isHovered = useElementHover(menuRef);
           transition-all
           duration-200
           hover:ring-cyan
-          @click="isDark = !isDark"
+          @click="toggleDark"
         >
           <a v-if="isDark" i-carbon-moon color-white></a>
           <a v-else i-carbon-sun color-dark></a>
