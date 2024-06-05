@@ -39,7 +39,7 @@ const titleChanger = () => {
         <h1 class="text-4xl font-bold" @click="titleChanger()">{{ title }}</h1>
         <p class="text-lg">{{ description }}</p>
       </div>
-      <div class="flex gap-2 justify-center active:scale-95">
+      <div class="flex gap-2 justify-center">
         <button
           class="mt-2 px-8 py-2 outline-none border-primary bg-blue-500 text-white rounded hover:bg-blue-2 active:scale-95"
           type="button"
