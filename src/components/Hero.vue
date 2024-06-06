@@ -26,7 +26,7 @@ const titleChanger = () => {
 };
 </script>
 
-<template>
+<template #hero>
   <div class="relative flex justify-center">
     <img
       id="cover"
