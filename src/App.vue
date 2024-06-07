@@ -2,6 +2,7 @@
 import Navbar from '@/components/Navbar.vue';
 import Hero from '@/components/Hero.vue';
 import { useDark, useToggle } from '@vueuse/core';
+import Box from './components/Box.vue';
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
@@ -15,16 +16,15 @@ const toggleDark = useToggle(isDark);
 
     <main>
       <Hero />
+      <Box />
     </main>
   </div>
 </template>
 
 <style lang="scss">
 #body {
-  max-width: 100vw;
-  max-height: 100vh;
-  width: 100%;
-  height: 100vh;
+  width: 98%;
+  height: 98%;
 }
 
 main {
