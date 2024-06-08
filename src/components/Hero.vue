@@ -16,23 +16,27 @@ const buttonTexts = ref({
 });
 
 const icons = ref([
-   {
-      className: 'i-hugeicons-new-twitter text-2xl',
-      link: 'https://x.com/bencikeramaian'
-    },
-    {
-      id: 'ig',
-      className: 'i-hugeicons-instagram text-2xl',
-      link: 'https://instagram.com/miiu4u'
-    },
-    {
-      id: 'mail',
-      className: 'i-hugeicons-mail-01 color-white border-1 rounded-lg text-2xl',
-      link: 'mailto:ebriluye1@gmail.com'
-    }
-])
+  {
+    className:
+      'i-hugeicons-new-twitter text-2xl cursor-pointer active:scale-90 transition-all',
+    link: 'https://x.com/bencikeramaian',
+  },
+  {
+    id: 'ig',
+    className:
+      'i-hugeicons-instagram text-2xl cursor-pointer active:scale-90 transition-all',
+    link: 'https://instagram.com/miiu4u',
+  },
+  {
+    id: 'mail',
+    className:
+      'i-hugeicons-mail-01 color-white border-1 rounded-lg text-2xl cursor-pointer active:scale-90 transition-all',
+    link: 'mailto:ebriluye1@gmail.com',
+  },
+]);
 
-const getText = (num: any) => buttonTexts.value[num] || 'Default';
+const getText = (num: keyof typeof buttonTexts.value) =>
+  buttonTexts.value[num] || 'Default';
 
 const linkTo = (link: string) => {
   window.location.href = link;
@@ -74,14 +78,10 @@ const titleChanger = () => {
       </div>
 
       <div class="flex flex-row justify-center items-center gap-2 mt-4">
-  <template v-for="(icon) in icons">
-    <i
-      :id="icon.id"
-      :class="icon.className"
-      @click="linkTo(icon.link)"
-    ></i>
-  </template>
-</div>
+        <template v-for="icon in icons">
+          <i :id="icon.id" :class="icon.className" @click="linkTo(icon.link)"></i>
+        </template>
+      </div>
     </div>
   </div>
 </template>
