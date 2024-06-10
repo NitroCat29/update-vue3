@@ -79,7 +79,11 @@ const titleChanger = () => {
 
       <div class="flex flex-row justify-center items-center gap-2 mt-4">
         <template v-for="icon in icons">
-          <i :id="icon.id" :class="icon.className" @click="linkTo(icon.link)"></i>
+          <svg
+            :id="icon.id"
+            :class="icon.className"
+            @click="linkTo(icon.link)"
+          ></svg>
         </template>
       </div>
     </div>
