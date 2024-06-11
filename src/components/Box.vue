@@ -37,6 +37,7 @@ const features = ref([
 </script>
 
 <style lang="scss">
+
 .features-section {
   display: flex;
   flex-wrap: wrap;

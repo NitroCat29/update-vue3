@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { useDark, useElementHover } from "@vueuse/core";
+import { ref } from 'vue';
+import { useDark, useElementHover } from '@vueuse/core';
 
 const isDark = useDark();
 const isMenuOpen = ref(false);
 
 const menuRef = ref<HTMLElement | null>(null);
-const isHovered = useElementHover(menuRef);
+// const isHovered = useElementHover(menuRef);
 
-const emit = defineEmits(["toggle-dark"]);
+const emit = defineEmits(['toggle-dark']);
 const toggleDark = () => {
   isDark.value = !isDark.value;
 };
@@ -28,11 +28,7 @@ const toggleDark = () => {
     dark:shadow-xl
     dark:shadow-red
     b-black
-    style="
-      transition:
-        background-color 0.5s ease-in-out,
-        color 0.5s ease-in-out;
-    "
+    style="transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out"
   >
     <div flex items-center>
       <a
@@ -44,14 +40,7 @@ const toggleDark = () => {
         font-bold
         text-gray-800
         dark:text-white
-        ><span
-          block
-          i-uil-home-alt
-          color-black
-          dark:color-white
-          w-10
-          h-10
-        ></span
+        ><span block i-uil-home-alt color-black dark:color-white w-10 h-10></span
       ></a>
     </div>
     <div class="flex items-center">
@@ -99,9 +88,7 @@ const toggleDark = () => {
             v-show="isMenuOpen"
             class="absolute z-10 bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700"
           >
-            <ul
-              class="text-sm text-gray-700 dark:text-gray-200 text-center pl-10"
-            >
+            <ul class="text-sm text-gray-700 dark:text-gray-200 text-center pl-10">
               <li>
                 <a
                   class="decoration-none mt-2 text-white text-center text-xl p-1 cursor-pointer"
@@ -115,6 +102,7 @@ const toggleDark = () => {
                   href="#"
                   >STARTUP</a
                 >
+                
               </li>
               <li>
                 <a

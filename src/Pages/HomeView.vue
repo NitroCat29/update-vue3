@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar.vue';
 import Hero from '@/components/Hero.vue';
 import { useDark, useToggle } from '@vueuse/core';
 import Box from '@/components/Box.vue';
+import Jumbotron from '@/components/Jumbotron.vue';
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
@@ -17,6 +18,7 @@ const toggleDark = useToggle(isDark);
     <main>
       <Hero />
       <Box />
+      <Jumbotron />
     </main>
   </div>
 </template>
